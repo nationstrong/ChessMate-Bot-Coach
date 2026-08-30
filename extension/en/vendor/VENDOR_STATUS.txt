@@ -1,0 +1,2 @@
+Stockfish WASM was not available at build time. The extension will use its bundled local fallback evaluator.
+Run `npm run vendor && npm run build` from source to vendor Stockfish 18 locally.

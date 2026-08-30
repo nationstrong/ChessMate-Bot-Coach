@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "ChessMate Bot Coach",
+  "version": "0.5.2",
+  "description": "A private local coach for confirmed Chess.com Bot/Computer games: openings, live outcome, candidate plans, tactical targets, and position analysis.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ChessMate Bot Coach"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chess.com/play/computer*",
+        "https://www.chess.com/*/play/computer*",
+        "https://www.chess.com/game/computer/*",
+        "https://www.chess.com/*/game/computer/*"
+      ],
+      "js": [
+        "core/chess-rules.js",
+        "core/game-state-tracker.js",
+        "core/uci-parser.js",
+        "core/coach.js",
+        "core/midgame-assessment.js",
+        "core/opening-book.js",
+        "site/chesscom-adapter.js",
+        "ui/panel.js",
+        "ui/translate-en.js",
+        "ui/board-overlay.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

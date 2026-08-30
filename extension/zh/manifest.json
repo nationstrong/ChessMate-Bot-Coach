@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "ChessMate Bot Coach 中文版",
+  "version": "0.5.2",
+  "description": "仅用于已确认的 Chess.com 机器人/电脑对局的本地中文教练：开局、中局风格、战术目标与实时局面分析。",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ChessMate Bot Coach 中文版"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chess.com/play/computer*",
+        "https://www.chess.com/*/play/computer*",
+        "https://www.chess.com/game/computer/*",
+        "https://www.chess.com/*/game/computer/*"
+      ],
+      "js": [
+        "core/chess-rules.js",
+        "core/game-state-tracker.js",
+        "core/uci-parser.js",
+        "core/coach.js",
+        "core/midgame-assessment.js",
+        "core/opening-book.js",
+        "site/chesscom-adapter.js",
+        "ui/panel.js",
+        "ui/board-overlay.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+0721ac97a6cd8b2dac47f23e9c7f98a8ed608b4fc9b9303687529585485ccd1c  ChessMate-Bot-Coach-EN-v0.5.2-installable.zip
+a672906e44faf58b1bb27c1ea56de7cba328b4ea15c61ef5f7426dd6821b25e8  ChessMate-Bot-Coach-ZH-v0.5.2-installable.zip
