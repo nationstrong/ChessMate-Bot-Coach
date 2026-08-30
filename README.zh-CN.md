@@ -30,13 +30,13 @@
 
 通过本地开局库识别常见开局，解释当前结构，并把本地局面评估换算为近似的胜/和/负概率。
 
-![开局识别与实时结果估计](docs/images/02-opening-and-live-outcome.png)
+![开局识别与实时结果估计](docs/images/02-opening-and-live-outcome.jpg)
 
 ### 三个候选方案与棋盘箭头
 
 最多提供三个候选着法；教练面板和棋盘使用相同编号，并给出简短的计划说明。
 
-![候选方案与箭头](docs/images/03-candidates-and-arrows.png)
+![候选方案与箭头](docs/images/03-candidates-and-arrows.jpg)
 
 ### 落点安全可视化
 
@@ -54,7 +54,7 @@
 
 根据 Bot 最近的走棋判断它偏向进攻、防守/反击，还是保持均衡。用户可选择执棋颜色、分析强度，并开关威胁箭头、落点安全和悬空子提示。
 
-![Bot 画像与控制项](docs/images/06-opponent-tendency-and-controls.png)
+![Bot 画像与控制项](docs/images/06-opponent-tendency-and-controls.jpg)
 
 ## 隐私与公平性
 
@@ -75,4 +75,3 @@
 ## 许可证
 
 项目代码使用 [MIT License](LICENSE)。Stockfish 如单独提供，则受 GPLv3 约束；每个安装包内均包含相应声明。v0.5.2 未安装 Stockfish WASM 文件时会使用扩展内置的轻量本地备用评估器。
-

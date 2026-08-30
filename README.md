@@ -30,13 +30,13 @@ If Chrome reports an error, make sure you selected the folder containing `manife
 
 Recognizes common opening families from a bundled local book, explains the position, and continuously converts the local evaluation into approximate win/draw/loss chances.
 
-![Opening recognition and live outcome estimate](docs/images/02-opening-and-live-outcome.png)
+![Opening recognition and live outcome estimate](docs/images/02-opening-and-live-outcome.jpg)
 
 ### Three candidate plans with board arrows
 
 Shows up to three candidate moves, numbered consistently in the coach panel and on the board, with a short explanation for each plan.
 
-![Candidate plans and arrows](docs/images/03-candidates-and-arrows.png)
+![Candidate plans and arrows](docs/images/03-candidates-and-arrows.jpg)
 
 ### Move-safety visualization
 
@@ -54,7 +54,7 @@ Finds opponent pieces that are currently undefended, distinguishes a safe captur
 
 Uses recent Bot moves to estimate whether the opponent is leaning toward attack, defense/counterplay, or a balanced plan. You can select playing color and analysis strength and toggle threat arrows, move safety, and loose targets.
 
-![Bot tendency profile and controls](docs/images/06-opponent-tendency-and-controls.png)
+![Bot tendency profile and controls](docs/images/06-opponent-tendency-and-controls.jpg)
 
 ## Privacy and fair-play design
 
@@ -75,4 +75,3 @@ See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md).
 ## License
 
 The project code is provided under the [MIT License](LICENSE). Stockfish, when supplied separately, is covered by GPLv3; see the notices included with each package. The bundled v0.5.2 package falls back to its lightweight local evaluator when Stockfish WASM files are not installed.
-
