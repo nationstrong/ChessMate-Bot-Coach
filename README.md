@@ -1,77 +1,77 @@
-# ChessMate Bot Coach
+# ChessMate 机器人教练
 
-**A private, local chess coach for confirmed Chess.com Bot/Computer games.**
+**面向已确认 Chess.com 机器人/电脑对局的本地中文/英文棋局教练。**
 
-[简体中文](README.zh-CN.md) · Version 0.5.2
+[English](README.en.md) · 版本 0.5.2
 
-> ChessMate intentionally enables itself only on supported Chess.com Bot/Computer pages. It is not designed for games against people.
+> ChessMate 只会在受支持的 Chess.com Bot/Computer 页面启用，不用于真人对局。
 
-## Download
+## 下载
 
-- [English package (v0.5.2)](releases/ChessMate-Bot-Coach-EN-v0.5.2-installable.zip)
 - [中文安装包（v0.5.2）](releases/ChessMate-Bot-Coach-ZH-v0.5.2-installable.zip)
+- [English package (v0.5.2)](releases/ChessMate-Bot-Coach-EN-v0.5.2-installable.zip)
 
-## Install in Chrome
+## 在 Chrome 中安装
 
-1. Download the ZIP for your language and unzip it.
-2. Open `chrome://extensions` in Chrome.
-3. Turn on **Developer mode** in the upper-right corner.
-4. Select **Load unpacked**.
-5. Choose the unzipped extension folder—the folder containing `manifest.json`.
-6. Open [Chess.com Computer](https://www.chess.com/play/computer) and start a Bot game.
+1. 下载对应语言的 ZIP 并解压。
+2. 在 Chrome 地址栏打开 `chrome://extensions`。
+3. 打开右上角的**开发者模式**。
+4. 点击**加载未打包的扩展程序**。
+5. 选择解压后包含 `manifest.json` 的扩展目录。
+6. 打开 [Chess.com Computer](https://www.chess.com/play/computer)，开始一盘机器人对局。
 
-![Load the unpacked extension](docs/images/01-install-extension.png)
+![加载未打包扩展](docs/images/01-install-extension.png)
 
-If Chrome reports an error, make sure you selected the folder containing `manifest.json`, not the ZIP itself or its parent folder.
+如果 Chrome 报错，请确认选择的是包含 `manifest.json` 的文件夹，而不是 ZIP 文件或它的上一级目录。
 
-## Features
+## 功能介绍
 
-### Opening recognition and live outcome estimate
+### 开局识别与实时结果估计
 
-Recognizes common opening families from a bundled local book, explains the position, and continuously converts the local evaluation into approximate win/draw/loss chances.
+通过本地开局库识别常见开局，解释当前结构，并把本地局面评估换算为近似的胜/和/负概率。
 
-![Opening recognition and live outcome estimate](docs/images/02-opening-and-live-outcome.jpg)
+![开局识别与实时结果估计](docs/images/02-opening-and-live-outcome.jpg)
 
-### Three candidate plans with board arrows
+### 三个候选方案与棋盘箭头
 
-Shows up to three candidate moves, numbered consistently in the coach panel and on the board, with a short explanation for each plan.
+最多提供三个候选着法；教练面板和棋盘使用相同编号，并给出简短的计划说明。
 
-![Candidate plans and arrows](docs/images/03-candidates-and-arrows.jpg)
+![候选方案与箭头](docs/images/03-candidates-and-arrows.jpg)
 
-### Move-safety visualization
+### 落点安全可视化
 
-Colors destination squares to show their immediate attack-and-defense relationship after the move: green is not attacked, yellow is attacked but defended, and red is attacked and undefended.
+根据走后格子的直接攻防关系标色：绿色表示不受攻击，黄色表示受攻击但有保护，红色表示受攻击且无保护。
 
-![Move-safety visualization](docs/images/04-move-safety.png)
+![落点安全](docs/images/04-move-safety.png)
 
-### Loose-piece and tactical-target detection
+### 悬空子与战术目标
 
-Finds opponent pieces that are currently undefended, distinguishes a safe capture from a capture that still needs calculation, and marks useful targets in the panel and on the board.
+识别对手未受保护的棋子，区分可以安全吃取的目标和仍需计算的交换，并在面板及棋盘上同步标记。
 
-![Loose-piece targets](docs/images/05-loose-targets.png)
+![悬空子目标](docs/images/05-loose-targets.png)
 
-### Bot tendency profile and adjustable controls
+### Bot 风格画像与控制项
 
-Uses recent Bot moves to estimate whether the opponent is leaning toward attack, defense/counterplay, or a balanced plan. You can select playing color and analysis strength and toggle threat arrows, move safety, and loose targets.
+根据 Bot 最近的走棋判断它偏向进攻、防守/反击，还是保持均衡。用户可选择执棋颜色、分析强度，并开关威胁箭头、落点安全和悬空子提示。
 
-![Bot tendency profile and controls](docs/images/06-opponent-tendency-and-controls.jpg)
+![Bot 画像与控制项](docs/images/06-opponent-tendency-and-controls.jpg)
 
-## Privacy and fair-play design
+## 隐私与公平性
 
-- Analysis runs locally in the browser extension.
-- No account credentials, moves, or personal data are sent to an external ChessMate server.
-- A page guard restricts coaching to confirmed Bot/Computer routes and signals.
-- The extension pauses or disables analysis when it cannot safely confirm an allowed game.
+- 分析在浏览器扩展内本地运行。
+- 不会把账号凭据、走棋或个人数据发送到 ChessMate 外部服务器。
+- 页面守卫只允许已确认的 Bot/Computer 路由和页面信号。
+- 无法安全确认允许的对局时，扩展会暂停或关闭分析。
 
-See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md).
+详见 [PRIVACY.md](PRIVACY.md) 与 [SECURITY.md](SECURITY.md)。
 
-## Repository layout
+## 目录结构
 
-- `extension/en/` — unpacked English extension
-- `extension/zh/` — unpacked Simplified Chinese extension
-- `releases/` — installable ZIP packages
-- `docs/images/` — real screenshots used in this README
+- `extension/en/` — 英文解压版扩展
+- `extension/zh/` — 简体中文解压版扩展
+- `releases/` — 可下载 ZIP 安装包
+- `docs/images/` — README 使用的真实截图
 
-## License
+## 许可证
 
-The project code is provided under the [MIT License](LICENSE). Stockfish, when supplied separately, is covered by GPLv3; see the notices included with each package. The bundled v0.5.2 package falls back to its lightweight local evaluator when Stockfish WASM files are not installed.
+项目代码使用 [MIT License](LICENSE)。Stockfish 如单独提供，则受 GPLv3 约束；每个安装包内均包含相应声明。v0.5.2 未安装 Stockfish WASM 文件时会使用扩展内置的轻量本地备用评估器。
