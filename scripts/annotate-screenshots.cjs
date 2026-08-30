@@ -12,8 +12,8 @@ const specs = [
   {
     input: '01-install-extension.png', output: '01-install-extension-annotated.jpg',
     boxes: [
-      { x: 26, y: 88, w: 354, h: 64, label: '② 点击「加载未打包的扩展程序」', lx: 28, ly: 172, lw: 620 },
-      { x: 2705, y: 18, w: 160, h: 45, label: '① 开启开发者模式', lx: 2240, ly: 78, lw: 430 }
+      { x: 32, y: 120, w: 350, h: 88, label: '② 点击「加载未打包的扩展程序」', lx: 830, ly: 122, lw: 620 },
+      { x: 2650, y: 34, w: 220, h: 54, label: '① 开启开发者模式', lx: 2210, ly: 96, lw: 430 }
     ]
   },
   {
@@ -89,4 +89,3 @@ function overlaySvg(width, height, spec) {
   console.error(error);
   process.exitCode = 1;
 });
-
