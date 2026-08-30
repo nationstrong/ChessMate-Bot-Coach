@@ -20,7 +20,7 @@
 5. 选择解压后包含 `manifest.json` 的扩展目录。
 6. 打开 [Chess.com Computer](https://www.chess.com/play/computer)，开始一盘机器人对局。
 
-![加载未打包扩展：开启开发者模式并点击加载未打包的扩展程序](docs/images/annotated/01-install-extension-annotated.jpg)
+![加载未打包扩展：开启开发者模式并点击加载未打包的扩展程序](docs/images/annotated/01-install-extension-annotated-v2.jpg)
 
 如果 Chrome 报错，请确认选择的是包含 `manifest.json` 的文件夹，而不是 ZIP 文件或它的上一级目录。
 
