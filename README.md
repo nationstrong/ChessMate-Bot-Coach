@@ -20,7 +20,7 @@
 5. 选择解压后包含 `manifest.json` 的扩展目录。
 6. 打开 [Chess.com Computer](https://www.chess.com/play/computer)，开始一盘机器人对局。
 
-![加载未打包扩展](docs/images/01-install-extension.png)
+![加载未打包扩展：开启开发者模式并点击加载未打包的扩展程序](docs/images/annotated/01-install-extension-annotated.jpg)
 
 如果 Chrome 报错，请确认选择的是包含 `manifest.json` 的文件夹，而不是 ZIP 文件或它的上一级目录。
 
@@ -30,31 +30,31 @@
 
 通过本地开局库识别常见开局，解释当前结构，并把本地局面评估换算为近似的胜/和/负概率。
 
-![开局识别与实时结果估计](docs/images/02-opening-and-live-outcome.jpg)
+![开局识别与实时结果估计](docs/images/annotated/02-opening-and-live-outcome-annotated.jpg)
 
 ### 三个候选方案与棋盘箭头
 
 最多提供三个候选着法；教练面板和棋盘使用相同编号，并给出简短的计划说明。
 
-![候选方案与箭头](docs/images/03-candidates-and-arrows.jpg)
+![候选方案与箭头](docs/images/annotated/03-candidates-and-arrows-annotated.jpg)
 
 ### 落点安全可视化
 
 根据走后格子的直接攻防关系标色：绿色表示不受攻击，黄色表示受攻击但有保护，红色表示受攻击且无保护。
 
-![落点安全](docs/images/04-move-safety.png)
+![落点安全颜色说明](docs/images/annotated/04-move-safety-annotated.jpg)
 
 ### 悬空子与战术目标
 
 识别对手未受保护的棋子，区分可以安全吃取的目标和仍需计算的交换，并在面板及棋盘上同步标记。
 
-![悬空子目标](docs/images/05-loose-targets.png)
+![对手悬空目标](docs/images/annotated/05-loose-targets-annotated.jpg)
 
 ### Bot 风格画像与控制项
 
 根据 Bot 最近的走棋判断它偏向进攻、防守/反击，还是保持均衡。用户可选择执棋颜色、分析强度，并开关威胁箭头、落点安全和悬空子提示。
 
-![Bot 画像与控制项](docs/images/06-opponent-tendency-and-controls.jpg)
+![Bot 画像与控制项](docs/images/annotated/06-opponent-tendency-and-controls-annotated.jpg)
 
 ## 隐私与公平性
 
